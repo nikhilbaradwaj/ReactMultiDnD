@@ -1,4 +1,4 @@
-Multi-select Drag and Drop in React
+## Multi-select Drag and Drop in React
 
 This is an example to show how to multi-select items and drag and drop them using the [react-dnd](https://github.com/react-dnd/react-dnd) library.
 
