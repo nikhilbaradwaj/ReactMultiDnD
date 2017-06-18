@@ -33,6 +33,7 @@ const fieldSource = {
     const dropResult = monitor.getDropResult();
     if (dropResult) {
       props.addItemsToCart(item.fields, item.source, dropResult);
+      props.clearItemSelection();
     }
   },
 };
@@ -83,6 +84,7 @@ Item.propTypes = {
   selectedSource: PropTypes.string,
   name: PropTypes.string,
   addItemsToCart: PropTypes.func,
+  clearItemSelection: PropTypes.func,
   selectedFields: PropTypes.array,
   isDragging: PropTypes.bool,
   connectDragSource: PropTypes.func,

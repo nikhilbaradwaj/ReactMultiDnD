@@ -36,7 +36,12 @@ class Cart extends React.Component {
   componentWillMount() {
     this.state = { selectedFields: [], lastSelectedIndex: -1 };
     this.handleItemSelection = this.handleItemSelection.bind(this);
+    this.clearItemSelection = this.clearItemSelection.bind(this);
     this.handleItemSelection(-1, false, false);
+  }
+
+  clearItemSelection() {
+    this.setState({ selectedFields: [], lastSelectedIndex: -1 });
   }
 
   handleItemSelection(index, cmdKey, shiftKey) {
@@ -77,6 +82,7 @@ class Cart extends React.Component {
         key={index}
         selectedSource={this.props.id}
         addItemsToCart={this.props.addItemsToCart}
+        clearItemSelection={this.clearItemSelection}
         selectedFields={this.state.selectedFields}
         handleSelection={this.handleItemSelection}
         index={index}
